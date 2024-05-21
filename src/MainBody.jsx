@@ -1,3 +1,4 @@
+import { FaEnvelope } from "react-icons/fa";
 import Customer from "./Customer";
 
 function MainBody() {
@@ -14,8 +15,12 @@ function MainBody() {
 
             <div className="mb-3">
                 <h2>Customers</h2>
-                <Customer id={1} name="John" email="john@gmail.com" />
-                <Customer id={2} name="Jane" email="jane@gmail.com" />
+                <Customer id={1} name="John" email="john@gmail.com">
+                    <FaEnvelope />
+                </Customer>
+                <Customer id={2} name="Jane" email="jane@gmail.com">
+                    <FaEnvelope />
+                </Customer>
                 <Customer id={3} name="Bob" email="bob@gmail.com" />
             </div>
         </main>

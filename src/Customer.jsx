@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-function Customer({ id, name, email }) {
+function Customer({ id, name, email, children }) {
     return (
         <div className="row">
             <div className="col-2">
@@ -11,6 +11,7 @@ function Customer({ id, name, email }) {
                 Name: {name} <br />
                 E-mail: {email} <br />
             </div>
+            <div className="col">{children}</div>
         </div>
     );
 }
