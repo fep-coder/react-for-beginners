@@ -1,17 +1,16 @@
-// eslint-disable-next-line react/prop-types
-function Customer({ id, name, email, children }) {
+import CustomerList from "./CustomerList";
+
+function Customer() {
+    const customers = [
+        { id: 1, name: "John", email: "john@gmail.com" },
+        { id: 2, name: "Jack", email: "jack@gmail.com" },
+    ];
+
     return (
         <div className="row">
-            <div className="col-2">
-                <img className="img-fluid" src="" />
-                Image placeholder
+            <div className="col-8 mx-auto">
+                <CustomerList customers={customers} />
             </div>
-            <div className="col-7">
-                Id: {id} <br />
-                Name: {name} <br />
-                E-mail: {email} <br />
-            </div>
-            <div className="col">{children}</div>
         </div>
     );
 }

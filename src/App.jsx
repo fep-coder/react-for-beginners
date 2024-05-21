@@ -1,9 +1,9 @@
-import Counter from "./Counter";
+import Customer from "./Customer";
 
 function App() {
     return (
         <div className="container">
-            <Counter />
+            <Customer />
         </div>
     );
 }
