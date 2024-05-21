@@ -7,6 +7,8 @@ function CustomerList({ customers }) {
                     <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Subscribed if else</th>
+                    <th>Subscribed if</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,6 +17,8 @@ function CustomerList({ customers }) {
                         <td>{customer.id}</td>
                         <td>{customer.name}</td>
                         <td>{customer.email}</td>
+                        <td>{customer.subscribed ? "Yes" : "No"}</td>
+                        <td>{customer.subscribed && "Yes"}</td>
                     </tr>
                 ))}
             </tbody>

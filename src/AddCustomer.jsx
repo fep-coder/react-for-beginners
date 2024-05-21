@@ -11,7 +11,7 @@ function AddCustomer({ setCustomers }) {
         // console.log(id, name, email);
         setCustomers((prevCustomers) => [
             ...prevCustomers,
-            { id, name, email },
+            { id, name, email, subscribed: false },
         ]);
     }
 

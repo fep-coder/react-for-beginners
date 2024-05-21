@@ -4,8 +4,8 @@ import AddCustomer from "./AddCustomer";
 
 function Customer() {
     const [customers, setCustomers] = useState([
-        { id: 1, name: "John", email: "john@gmail.com" },
-        { id: 2, name: "Jack", email: "jack@gmail.com" },
+        { id: 1, name: "John", email: "john@gmail.com", subscribed: true },
+        { id: 2, name: "Jack", email: "jack@gmail.com", subscribed: false },
     ]);
 
     return (
