@@ -1,27 +1,26 @@
 import { useState } from "react";
 
 function Counter() {
-    function testState() {
-        console.log("Setting the state");
-        return 10;
+    const [count, setCount] = useState({ title: "Counter", count: 10 });
+
+    function handleIncrement() {
+        setCount((prevState) => ({ ...prevState, count: prevState.count + 1 }));
     }
 
-    const [count, setCount] = useState(() => testState());
-
     function handleDecrement() {
-        setCount((prevState) => prevState - 1);
-        setCount((prevState) => prevState - 1);
+        setCount((prevState) => ({ ...prevState, count: prevState.count - 1 }));
     }
 
     return (
         <div className="row mt-3">
             <div className="col text-center">
                 <h4>
-                    Counter <span className="text-success">{count}</span>
+                    {count.title}{" "}
+                    <span className="text-success">{count.count}</span>
                 </h4>
 
                 <button
-                    onClick={() => setCount(count + 1)}
+                    onClick={handleIncrement}
                     className="btn btn-success mx-1"
                 >
                     +1
