@@ -1,12 +1,14 @@
 import { useState } from "react";
 
 function Counter() {
-    const [count, setCount] = useState(10);
+    function testState() {
+        console.log("Setting the state");
+        return 10;
+    }
+
+    const [count, setCount] = useState(() => testState());
 
     function handleDecrement() {
-        // setCount(count - 1);
-        // setCount(count - 1);
-
         setCount((prevState) => prevState - 1);
         setCount((prevState) => prevState - 1);
     }
