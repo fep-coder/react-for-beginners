@@ -1,3 +1,5 @@
+import Customer from "./Customer";
+
 function MainBody() {
     return (
         <main>
@@ -11,11 +13,10 @@ function MainBody() {
             </ul>
 
             <div className="mb-3">
-                <input
-                    maxLength={5}
-                    readOnly={true}
-                    placeholder="Enter your name"
-                />
+                <h2>Customers</h2>
+                <Customer id={1} name="John" email="john@gmail.com" />
+                <Customer id={2} name="Jane" email="jane@gmail.com" />
+                <Customer id={3} name="Bob" email="bob@gmail.com" />
             </div>
         </main>
     );
