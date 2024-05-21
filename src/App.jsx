@@ -1,33 +1,6 @@
-function Header() {
-    return (
-        <header>
-            <h1 className="text-center">React for beginners</h1>
-        </header>
-    );
-}
-
-function MainBody() {
-    return (
-        <main>
-            <p>Learn react</p>
-            <ul>
-                <li>Components</li>
-                <li>States</li>
-                <li>Hooks</li>
-                <li>Routing</li>
-                <li>Redux</li>
-            </ul>
-        </main>
-    );
-}
-
-function Footer() {
-    return (
-        <footer>
-            <h1 className="text-center">&copy; {new Date().getFullYear()}</h1>
-        </footer>
-    );
-}
+import Footer from "./Footer";
+import Header from "./Header";
+import MainBody from "./MainBody";
 
 function App() {
     return (
