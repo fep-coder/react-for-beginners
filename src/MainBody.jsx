@@ -9,6 +9,14 @@ function MainBody() {
                 <li>Routing</li>
                 <li>Redux</li>
             </ul>
+
+            <div className="mb-3">
+                <input
+                    maxLength={5}
+                    readOnly={true}
+                    placeholder="Enter your name"
+                />
+            </div>
         </main>
     );
 }
