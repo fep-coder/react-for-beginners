@@ -1,13 +1,9 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import MainBody from "./MainBody";
+import Counter from "./Counter";
 
 function App() {
     return (
         <div className="container">
-            <Header />
-            <MainBody />
-            <Footer />
+            <Counter />
         </div>
     );
 }
