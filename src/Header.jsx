@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
         <nav className="navbar navbar-expand-sm bg-body-tertiary">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">
+                <NavLink className="navbar-brand" to="/">
                     React
-                </Link>
+                </NavLink>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -21,19 +21,22 @@ function Header() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/products">
+                            <NavLink end className="nav-link" to="/products">
                                 Products
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/products/details">
+                            <NavLink
+                                className="nav-link"
+                                to="/products/details"
+                            >
                                 ProductDetails
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/pricing">
+                            <NavLink className="nav-link" to="/pricing">
                                 Pricing
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
