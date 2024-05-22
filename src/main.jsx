@@ -17,7 +17,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path="/" element={<Home />} />
                     <Route path="/products">
                         <Route path="" element={<Products />} />
-                        <Route path="details" element={<ProductDetails />} />
+                        <Route
+                            path="details/:name?/:id?"
+                            element={<ProductDetails />}
+                        />
                     </Route>
                     <Route path="*" element={<NotFound />} />
                 </Routes>
