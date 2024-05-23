@@ -6,12 +6,18 @@ const initialState = {
         { id: 2, name: "Bananas", category: "fruit" },
         { id: 3, name: "Blue shirt", category: "shirts" },
     ],
+    selectedProduct: null,
 };
 
 const productSlice = createSlice({
     name: "product",
     initialState,
-    reducers: {},
+    reducers: {
+        selectProduct: (state, action) => {
+            state.selectedProduct = action.payload;
+        },
+    },
 });
 
+export const { selectProduct } = productSlice.actions;
 export default productSlice.reducer;
