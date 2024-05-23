@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { resetAll } from "../actions";
 
 const initialState = {
     products: [
@@ -19,6 +20,11 @@ const productSlice = createSlice({
         resetProduct: (state) => {
             state.selectedProduct = null;
         },
+    },
+    extraReducers: (builder) => {
+        builder.addCase(resetAll, (state) => {
+            state.selectedProduct = null;
+        });
     },
 });
 

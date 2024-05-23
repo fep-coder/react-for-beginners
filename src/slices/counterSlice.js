@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { resetProduct } from "./productSlice";
+import { resetAll } from "../actions";
 
 const initialState = { count: 0 };
 
@@ -15,8 +15,7 @@ const counterSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        // builder.addCase("product/resetProduct", (state) => {
-        builder.addCase(resetProduct, (state) => {
+        builder.addCase(resetAll, (state) => {
             state.count = 0;
         });
     },

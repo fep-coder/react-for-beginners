@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { resetProduct } from "./slices/productSlice";
+import { resetAll } from "./actions";
 
 function ResetApp() {
     const dispatch = useDispatch();
@@ -8,7 +8,7 @@ function ResetApp() {
         <div>
             <button
                 className="btn btn-danger"
-                onClick={() => dispatch(resetProduct())}
+                onClick={() => dispatch(resetAll())}
             >
                 Reset App
             </button>
