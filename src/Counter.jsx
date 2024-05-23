@@ -13,18 +13,18 @@ function Counter() {
 
             <input
                 value={startValue}
-                onChange={(e) => setStartValue(e.target.value)}
+                onChange={(e) => setStartValue(Number(e.target.value))}
             />
 
             <button
                 className="btn btn-primary mx-1"
-                onClick={() => dispatch(increment(Number(startValue)))}
+                onClick={() => dispatch(increment(startValue))}
             >
                 +
             </button>
             <button
                 className="btn btn-danger mx-1"
-                onClick={() => dispatch(decrement(Number(startValue)))}
+                onClick={() => dispatch(decrement(startValue))}
             >
                 -
             </button>
